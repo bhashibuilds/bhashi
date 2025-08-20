@@ -1,0 +1,23 @@
+.about-me {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;   /* center text */
+  padding: 40px 20px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.about-me img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;   /* vertical spacing + center horizontally */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-me img:hover {
+  transform: scale(1.05);
+}
