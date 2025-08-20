@@ -7,11 +7,12 @@
 
 body {
   background-color: #fdfdfd;
-  font-family: hagrid, sans-serif;
   font-style: normal;
   font-weight: 100;
   overflow-y: hidden; /* disable vertical scroll */
 }
+
+
 
 /* Navbar */
 .navbar {
@@ -26,11 +27,29 @@ body {
   z-index: 100;
 }
 
-.logo {
-  font-size: 24px;
-  text-decoration: none;
-  color: #111;
+.logo-container {
+  display: flex;           /* logo and text in a row */
+  align-items: center;     /* vertically center */
+  text-decoration: none;   /* remove underline */
+  color: inherit;          /* text color inherits from logo-container */
 }
+
+/* Logo animation on hover only */
+.logo {
+  font-size: 18;
+  color: #000000;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+/* Text stays static */
+.logo-text {
+  font-size: 5;
+  color: #333;
+  text-decoration: none;  
+}
+
 
 .nav-links {
   list-style: none;
@@ -44,9 +63,7 @@ body {
   font-weight: 500;
 }
 
-.nav-links li a:hover {
-  color: #1a73e8;
-}
+
 
 /* Hamburger */
 .hamburger {
@@ -97,13 +114,14 @@ body {
 }
 
 .footer-name h1 {
-  font-size: 4rem;
-  font-family: hagrid, sans-serif;
+  font-size: 9rem;
+  font-family: "Archivo Black", sans-serif; /* Use quotes for multi-word font names */
   font-style: normal;
-  font-weight: bold;
-  color: black;
+  font-weight: 400; /* Archivo Black is usually 400 for the black weight on Google Fonts */
+  color: rgb(235, 146, 21);
   letter-spacing: 2px;
 }
+
 
 /* Swiper Projects */
 /* Swiper Projects */
@@ -115,11 +133,38 @@ body {
   width: 220px;
   height: 400px;
   background: lightblue;
+  flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  font-weight: bold;
-  object-fit: cover;
+  font-weight: bold;    /* stack image on top of text */
+  object-fit: cover; 
 }
 
+
+.swiper-slide.project img {
+  width: 100%;
+  height: 180px;          /* adjust as needed */
+  object-fit: cover;      /* keeps image aspect ratio and crops nicely */
+  border-radius: 10px;
+  display: flex; 
+  
+}
+
+.swiper-slide.project .caption {
+  margin-top: 8px;        /* spacing between image and text */
+  font-size: 11px;        /* adjust font size */
+  text-align: center;    
+  margin-top: 220px;  /* center the text */
+  color: #111;
+}
+
+.swiper-slide.project span {
+  display: block;
+  margin-top: 8px;       /* space between image and text */
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #111;
+}
 
