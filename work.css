@@ -98,7 +98,7 @@ body {
   font-weight: 500;
 }
 .nav-left a:hover {
-  color: #555;
+  color: #2a56db;
 }
 
 /* Center (Name) */
@@ -126,7 +126,7 @@ body {
   font-weight: 500;
 }
 .nav-right a:hover {
-  color: #555;
+  color: #2a56db;
 }
 
 .accordion-button::after {
@@ -152,3 +152,5 @@ body {
   color: #222;           /* dark text */
   margin-bottom: 30px;   /* spacing before accordion */
 }
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat101.cur), auto !important;} /* End https://www.cursors-4u.com */

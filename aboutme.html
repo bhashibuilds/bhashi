@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <!-- link to your external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra inline CSS (only if you need it here) */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #222;
+      font-size: 18px;
+      margin: 0 10px;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #555;
+    }
+
+    .logo-container {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* keeps scrollbars away when pics move around */
+    }
+
+    .about-me {
+      position: relative;
+      z-index: 1;
+      padding: 40px;
+      max-width: 600px;
+    }
+
+    .floating-pic {
+      position: absolute;
+      width: 120px;
+      height: auto;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <!-- Left -->
+    <div class="nav-left">
+      <a href="aboutme.html" class="nav-link">About Me</a>
+    </div>
+
+    <!-- Center -->
+    <div class="logo-container">
+      <h1 class="crimson-text-semibold">Bhashini Yasam</h1>
+    </div>
+
+    <!-- Right -->
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">☺︎ Home</a>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <div class="about-me">
+    <p>
+      Born in Chennai and raised between cultures, I moved to the United States at the age of eight as a first-generation immigrant. Curious and a little mischievous as a child, I often broke things just to see how they worked — a habit that has stayed with me as a love for exploring, questioning, and building.
+
+During high school, I pursued dual enrollment at PGCC, where I originally thought I would follow the path of medicine after witnessing my grandmother’s cancer diagnosis. Many of my early projects reflect that experience, carrying a strong medical influence and a drive to make things that truly help people. What I learned through that journey, however, was bigger than medicine: the importance of solving problems at their root.
+
+The pandemic shifted my perspective. I realized that technology could amplify my curiosity and impact — allowing me to build tools that touch more lives, solve diverse challenges, and combine with my engineering mindset. This realization led me to pursue Computer Science at the University of Maryland, where I continue to deepen my passion for problem-solving.
+
+Beyond academics and projects, I’m someone who thrives on creativity and exploration. I love learning languages — from Chinese and French to Spanish, Hindi, Telugu, and Tamil. I paint, draw, sculpt, and garden; I meditate, travel, volunteer, and unwind by playing games like Minecraft. Whether through art, technology, or connection, I am constantly searching for new ways to build, understand, and give back.
+    </p>
+  </div>
+
+  <main>
+    <div id="container3D"></div>
+  </main>
+
+  <script type="module" src="main.js" ></script>
+
+
+
+
+  <!-- Script for floating images -->
+  <script>
+    const images = [
+      "pic1.jpg", // replace with your images
+      "pic2.jpg",
+      "pic3.jpg",
+      "pic4.jpg"
+    ];
+
+    function showRandomImage() {
+      const img = document.createElement("img");
+      img.src = images[Math.floor(Math.random() * images.length)];
+      img.classList.add("floating-pic");
+
+      // random position across screen
+      img.style.left = Math.random() * (window.innerWidth - 120) + "px";
+      img.style.top = Math.random() * (window.innerHeight - 120) + "px";
+
+      document.body.appendChild(img);
+
+      // fade in
+      setTimeout(() => {
+        img.style.opacity = 1;
+      }, 100);
+
+      // fade out + remove after 5s
+      setTimeout(() => {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.remove();
+        }, 1000);
+      }, 5000);
+    }
+
+    // keep showing images every 2.5s
+    setInterval(showRandomImage, 2500);
+  </script>
+</body>
+</html>
