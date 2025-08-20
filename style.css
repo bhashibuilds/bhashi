@@ -135,34 +135,41 @@ body {
 }
 
 .swiper-slide.project {
-  width: 220px;
-  height: 400px;
-  background: lightblue;
-  flex-direction: column;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  font-weight: bold;    /* stack image on top of text */
-  object-fit: cover; 
 }
 
-
-.swiper-slide.project img {
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 180px;          /* adjust as needed */
-  object-fit: cover;      /* keeps image aspect ratio and crops nicely */
-  border-radius: 10px;
-  display: flex; 
-  
+  max-width: 400px; /* adjust how wide each project can be */
 }
 
-.swiper-slide.project .caption {
-  margin-top: 8px;        /* spacing between image and text */
-  font-size: 11px;        /* adjust font size */
-  text-align: center;    
-  margin-top: 220px;  /* center the text */
+.project-card img {
+  width: 100%;
+  height: auto;        /* let the image keep its natural ratio */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.project-card .caption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+  font-family: "Crimson Text", serif;
   color: #111;
 }
+
 
 .swiper-slide.project span {
   display: block;
@@ -207,5 +214,27 @@ body {
   font-family: "Crimson Text", serif;
   font-weight: 700;
   font-style: italic;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project img:hover {
+  transform: scale(1.05); /* zoom in */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.caption {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-family: "Crimson Text", serif;
+  font-weight: 50;
+  font-size: 0.95rem;
+  color: #333;
 }
 

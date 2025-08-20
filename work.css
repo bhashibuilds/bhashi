@@ -1,0 +1,154 @@
+/* Import Crimson Text font */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+
+/* General body */
+body {
+  margin: 0;
+  font-family: "Crimson Text", serif;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-item {
+  background-color: #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 3px;
+  border-radius: 0;
+}
+
+.accordion-item:last-child {
+  border-bottom: 2px solid #fff;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-button,
+.accordion-body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.accordion-button {
+  background-color: #fff !important;
+  border: none;
+  box-shadow: none;
+  color: #333;
+}
+
+.accordion-button.collapsed {
+  background-color: #fff !important;
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #fff;
+  padding: 15px 20px;
+}
+
+.accordion-button:focus,
+.accordion-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Custom arrow */
+.accordion-button::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #090101;
+  transition: transform 0.3s;
+}
+
+.accordion-button.collapsed::after {
+  transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+  padding: 14px 18px;
+  font-family: "Crimson Text", serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Left (About Me) */
+.nav-left {
+  margin-right: auto;
+}
+.nav-left a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-left a:hover {
+  color: #555;
+}
+
+/* Center (Name) */
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-container h1 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  color: #000;
+}
+
+/* Right (Home) */
+.nav-right {
+  margin-left: auto;
+}
+.nav-right a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+}
+.nav-right a:hover {
+  color: #555;
+}
+
+.accordion-button::after {
+  background-image: none !important; /* remove Bootstrap’s default arrow */
+  content: "▼"; 
+  font-size: 0.8rem;
+  color: #090101;
+  transition: transform 0.3s;
+}
+
+.skills-intro {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  text-align: justify;   /* every line same width */
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+.skills-intro p {
+  font-family: "Crimson Text", serif;
+  font-size: 20px;       /* bigger text */
+  font-weight: 400;      /* medium weight for readability */
+  color: #222;           /* dark text */
+  margin-bottom: 30px;   /* spacing before accordion */
+}
