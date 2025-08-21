@@ -118,12 +118,15 @@ body {
   background: transparent;
   z-index: 10;
 }
+
 .footer-name h1 {
   font-size: 9rem;
-  font-weight: 400;
+  font-weight: 600; /* semi-bold */
+  font-family: 'Crimson Text', serif; /* correct font reference */
   color: #000;
   letter-spacing: 2px;
 }
+
 
 /* Swiper */
 .swiper {

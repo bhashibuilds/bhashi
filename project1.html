@@ -95,6 +95,13 @@ img.project-image {
   margin: 20px 0;
 }
 
+/* Image grids */
+.user-persona, .competitors, .design-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 </style>
 </head>
 <body>
@@ -124,72 +131,171 @@ img.project-image {
 
 <!-- Main Content -->
 <div class="container">
+
   <!-- Project Header -->
   <h1>Adhera</h1>
-  <p><em>Project tagline / one-liner describing the purpose</em></p>
+  <p><em>A clinic-partnered platform helping weight loss patients stay on track with AI-led nutrition tracking and personalized health guidance.</em></p>
 
   <!-- Setting the Scene -->
   <div class="section">
     <h2>Setting the Scene</h2>
-    <p>In March 2025, we decided to build Adhera, a smart solution for weight loss clinics that combines scheduling, patient engagement, and AI-powered calorie tracking.</p>
+    <p>In March 2025, we began developing Adhera, a clinic-partnered solution for weight loss patients. The idea was inspired by my father, who works at a weight loss clinic, where he observed that many patients struggle to track habits like food intake and medications outside the clinic. Existing apps such as MyFitnessPal often lack the doctor-patient connection needed to support patients in achieving personalized health goals.</p>
   </div>
 
-  <!-- Problem / Challenge -->
+  <!-- Challenge -->
   <div class="section">
     <h2>The Challenge</h2>
-    <p>Weight loss clinics struggled to keep patients engaged and maintain adherence to diet and appointment schedules. Our goal: improve patient retention and simplify clinic workflow.</p>
+    <p>Weight loss patients struggle to track calories and stay engaged, while doctors lack real-time analytics to monitor progress, limiting clinic effectiveness. This also causes patient treatment time to be much longer, resulting in failed treatment plans.</p>
     <div class="callout">
-      <strong>Core Problem:</strong> Patients often miss appointments and fail to track nutrition effectively, reducing clinic efficacy.
+      <strong>Core Problem:</strong> Patients struggle to track calories and stay engaged, while doctors lack real-time analytics to monitor progress.
     </div>
   </div>
 
-  <!-- Solution -->
+
+
+  <!-- Target Users -->
+  <div class="section">
+    <h2>Target Users</h2>
+    <p><strong>Primary Users:</strong> Weight loss patients seeking structured support outside of clinic visits.</p>
+    <p><strong>Secondary Users:</strong> Weight loss doctors who want actionable insights on patient progress.</p>
+    <h3>User Needs</h3>
+    <ul>
+      <li>Easy meal logging and nutrition tracking</li>
+      <li>Motivation and reminders for adherence</li>
+      <li>Analytics on progress</li>
+      <li>Secure and shareable reports for doctor reviews</li>
+    </ul>
+  </div>
+
+  <!-- User Personas -->
+  <div class="section">
+    <h2>User Personas</h2>
+    <div class="user-persona">
+            <h3>Emily, 45, Working Professional</h3>
+      <img src="emily.jpeg" alt="Emily Persona" class="project-image">
+    </div>
+    <div class="user-persona">
+      <h3>Dr. Patel, Weight Loss Clinic Doctor</h3>
+      <img src="patel.jpeg" alt="Dr. Patel Persona" class="project-image">
+    </div>
+  </div>
+
+
+
+    <!-- Solution -->
   <div class="section">
     <h2>Solution Overview</h2>
     <p>We built Adhera, a mobile-first platform integrating smart appointment scheduling, AI-based calorie estimation, and patient engagement tools.</p>
-    <img src="adhera.jpg" alt="Adhera Prototype" class="project-image">
+  </div>
+  
+  <!-- Core Value Proposition -->
+  <div class="section">
+    <h2>Core Value Proposition</h2>
+    <p><strong>For Patients:</strong> Simplified meal logging, personalized reminders, AI-based insights to stay motivated and accountable.</p>
+    <p><strong>For Clinics:</strong> Patient progress tracking, actionable reports, and a channel for improved patient engagement.</p>
   </div>
 
-  <!-- Role & Contributions -->
+  <!-- Competitive Analysis -->
   <div class="section">
-    <h2>My Role & Contributions</h2>
+    <h2>Competitive Analysis</h2>
+    <div class="competitors">
+      <img src="images/myfitnesspal.png" alt="MyFitnessPal" class="project-image">
+      <img src="images/noom.png" alt="Noom" class="project-image">
+      <img src="images/cronometer.png" alt="Cronometer" class="project-image">
+    </div>
+    <p><strong>Differentiation:</strong> Clinic-oriented features, AI meal logging, mobile-first focus, lightweight V1 scaling to clinic integration in V2.</p>
+  </div>
+
+  <!-- Product Features -->
+  <div class="section">
+    <h2>Product Features</h2>
+    <h3>V1 – MVP</h3>
     <ul>
-      <li>Architecture planning & AWS cloud setup</li>
-      <li>Frontend development with React Native</li>
-      <li>AI integration using Python</li>
-      <li>Data analytics & dashboard design for clinics</li>
+      <li>Photo-based food logging with AI calorie/macro estimation</li>
+      <li>Manual entry/correction for accuracy
+              <li>Patient dashboard: Nutrition trends and insights</li>
+      <li>Shareable reports for doctor visits</li>
+      <li>Basic reminders for meal and health goal logging</li>
+      <li>Simple goal setting: Calorie targets, macro ratios</li>
+    </ul>
+
+    <h3>V2 – Add-ons</h3>
+    <ul>
+      <li>Doctor dashboard access for tracking multiple patients</li>
+      <li>Appointment scheduling integration</li>
+      <li>Real-time doctor-patient communication</li>
+      <li>Wearable integration for activity tracking</li>
+    </ul>
+    <p><strong>Why V1 first:</strong> Focus on high-value, low-complexity features to validate patient adoption and engagement before scaling to clinics.</p>
+  </div>
+
+  <!-- Metrics & KPIs -->
+  <div class="section">
+    <h2>Metrics & KPIs</h2>
+    <ul>
+      <li><strong>Patient Engagement:</strong> Daily active users logging meals, reminder adherence rate, weekly active users</li>
+      <li><strong>Health Outcomes:</strong> % of patients meeting calorie/macronutrient goals, weight progress over time</li>
+      <li><strong>Clinic Value:</strong> % of patients sharing reports, doctor adoption and feedback, patient retention rates</li>
     </ul>
   </div>
 
-  <!-- Results / Impact -->
+  <!-- Go-to-Market Strategy -->
   <div class="section">
-    <h2>Impact & Outcome</h2>
-    <p>During testing with clinics and patients, we observed:</p>
+    <h2>Go-to-Market Strategy</h2>
+    <p><strong>Target early adopters:</strong> Nearby weight loss clinics and health-tech investors.</p>
+    <p><strong>Pitch angle:</strong></p>
     <ul>
-      <li>Increased patient adherence to appointments by 30%</li>
-      <li>Improved tracking of nutrition with AI estimates</li>
-      <li>Enhanced clinic workflow and engagement</li>
+      <li>For clinics: “Improve patient adherence and outcomes without extra staff workload.”</li>
+      <li>For investors: “AI-powered patient engagement platform with scalable clinic integration; early focus on mobile-first patient adoption.”</li>
+    </ul>
+    <p><strong>Pilot plan:</strong> Partner with 2–3 local clinics for 3 months, collect patient engagement and health outcome data, iterate features based on usage patterns.</p>
+  </div>
+
+  <!-- Roadmap -->
+  <div class="section">
+    <h2>Roadmap (High-Level)</h2>
+    <table>
+      <tr><th>Phase</th><th>Timeline</th><th>Features</th></tr>
+      <tr><td>MVP (V1)</td><td>0–3 months</td><td>AI food logging, manual corrections, dashboard, shareable reports, basic reminders</td></tr>
+      <tr><td>Early Adoption</td><td>3–6 months</td><td>Pilot with clinics, collect feedback</td></tr>
+      <tr><td>V2</td><td>6–12 months</td><td>Doctor dashboard, appointment sync, messaging, wearable integration</td></tr>
+    </table>
+  </div>
+
+  <!-- Business Model -->
+  <div class="section">
+    <h2>Business Model</h2>
+    <ul>
+      <li><strong>B2B:</strong> Subscription for clinics (per patient or per clinic license)</li>
+      <li><strong>B2C:</strong> Optional freemium model for patients (basic logging free, advanced insights paid)</li>
     </ul>
   </div>
 
-  <!-- Future Scope -->
+  <!-- Design & UX Approach -->
   <div class="section">
-    <h2>Future Scope</h2>
-    <p>Potential improvements include:</p>
-    <ul>
-      <li>Gamification for patient engagement</li>
-      <li>Integrations with wearable devices</li>
-      <li>Expanded analytics dashboard for clinics</li>
-    </ul>
+    <h2>Design & UX Approach</h2>
+    <p>Mobile-first design for patients, clean dashboards for quick insights, and simple AI-powered photo logging to reduce friction.</p>
+    <div class="design-features">
+      <img src="images/dashboard.png" alt="Patient Dashboard" class="project-image">
+      <img src="images/meal_logging.png" alt="AI Meal Logging" class="project-image">
+      <img src="images/reminders.png" alt="Reminders Screen" class="project-image">
+      <img src="images/clinic_dashboard.png" alt="Clinic Dashboard" class="project-image">
+      <img src="images/goal_tracking.png" alt="Goal Tracking" class="project-image">
+      <img src="images/feature1.png" alt="Feature 1" class="project-image">
+      <img src="images/feature2.png" alt="Feature 2" class="project-image">
+      <img src="images/feature3.png" alt="Feature 3" class="project-image">
+      <img src="images/feature4.png" alt="Feature 4" class="project-image">
+      <img src="images/feature5.png" alt="Feature 5" class="project-image">
+    </div>
   </div>
 
 </div>
 
-
-
 <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 

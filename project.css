@@ -125,3 +125,8 @@ body {
   background-color: rgba(56, 54, 48, 1); /* fully opaque on hover */
 }
 
+.container h1 {
+  text-align: center; /* centers only the h1 */
+  font-size: 3rem;    /* adjust size as needed */
+  margin-bottom: 10px; /* optional spacing below */
+}
