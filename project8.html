@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project 1 | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamagotchi Desktop App | Portfolio</title>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="project.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<!-- Navbar -->
-<header class="navbar">
-  <a href="index.html" class="logo-container">
-    <span class="logo">☺︎</span>
-    <span class="logo-text">Creativity ℰ Engineering</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
-    <li><a href="aboutme.html">About Me</a></li>
-    <li><a href="creative.html">Creative</a></li>
-    <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">Resume</a>
-  </ul>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo-container">
+      <span class="logo">☺︎</span>
+      <span class="logo-text">Creativity ℰ Engineering</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="creative.html">Creative</a></li>
+      <li>
+        <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">
+          Resume
+        </a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1><u>Tamagotchi Desktop App</u> — A Virtual Pet Experience for Modern Computers</h1>
+    <p>IOS, Game Design, Desktop Development, Creative Coding</p>
+    <small>Case Study • 2025</small>
+  </header>
+
+  <!-- Narrative -->
+  <section class="narrative">
+    <h2>Setting the Scene</h2>
+    <p>
+      Inspired by the nostalgic handheld Tamagotchi toys, I built a desktop app version that 
+      brings a digital pet directly onto your computer. The goal was to design a playful, 
+      interactive experience that helps users feel companionship and fun while working on their computers.
+    </p>
+  </section>
+
+<section class="technologies">
+  <h2>Technologies Used</h2>
+  <p>
+    The Tamagotchi Desktop App was built entirely in Python, leveraging its simplicity and versatility for game development. I also did scripting and utilized xcode.
+    <strong>Pygame</strong> was used to handle graphics, animations, and the game loop, creating an interactive, real-time virtual pet experience.
+  </p>
+  <p>
+    Other Python standard libraries, such as <code>random</code> and <code>time</code>, were used to manage pet behaviors and event timing. 
+    The app was developed in <strong>VS Code</strong> and can be packaged into a standalone desktop application using tools like <strong>PyInstaller</strong>.
+  </p>
+</section>
+
+<section class="pictures">
+  <h2>Download</h2>
+  <p>
+    <a href="Tamagotchi.zip" download class="btn btn-primary">
+      Download the App
+    </a>
+  </p><br>
+
+  <div class="prototype-gallery">
+    <img src="tama2.png" alt="Feeding Interaction" />
   </div>
-</header>
-
-<!-- Floating Navigation Buttons -->
-<a href="project1.html" class="floating-nav prev">← Previous</a>
-<a href="project3.html" class="floating-nav next">Next →</a>
+</section>
 
 
+  <!-- Reflection -->
+  <section class="reflection">
+    <h2>Reflection & Next Steps</h2>
+    <p>
+      Building this app helped me explore event-driven desktop programming and 
+      balancing simplicity with fun interactivity. My main takeaway: small touches 
+      like animations and notifications make the experience feel much more personal. 
+    </p>
+    <p>
+      Next steps include adding customizable pets, more mini-games, and 
+      integration with productivity tools so the Tamagotchi can remind users to 
+      stretch, hydrate, or take a short break.
+    </p>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="next-project">
+    <a href="project2.html">NEXT PROJECT →</a>
+  </footer>
 </body>
 </html>
+
