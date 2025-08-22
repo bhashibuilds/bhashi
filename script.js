@@ -1,4 +1,3 @@
-// Hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -6,20 +5,30 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Initialize Swiper
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 5,     // shows 2 full slides + half of next
-    spaceBetween: 5,        // space between slides
-    loop: true,              // infinite loop
-    centeredSlides: false,   // keep slides left-aligned
-    mousewheel: true,        // scroll with wheel
-    speed: 450               // transition speed in ms
+    slidesPerView: 3,       // default visible slides
+    spaceBetween: 15,
+    loop: true,
+    loopAdditionalSlides: 3, // extra cloned slides to avoid blank
+    centeredSlides: false,
+    mousewheel: true,
+    speed: 450,
+    grabCursor: true,
+    breakpoints: {
+      1024: { slidesPerView: 3, spaceBetween: 15 },
+      768: { slidesPerView: 2, spaceBetween: 10 },
+      480: { slidesPerView: 1, spaceBetween: 5 },
+    }
   });
-}); // <-- closing DOMContentLoaded listener
 
-document.querySelectorAll('.project-card a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.stopPropagation(); // stops Swiper swipe from interfering
+  document.querySelectorAll('.project-card a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.stopPropagation();
+    });
   });
 });
+
+
+
+

@@ -131,18 +131,21 @@ body {
 /* Swiper */
 .swiper {
   height: calc(100vh - 80px);
-  padding-top: 10px; /* closer to navbar */
+  padding-top: 10px;
 }
+
 .swiper-wrapper {
-  gap: 0 !important; /* remove all spacing */
+  display: flex;
 }
+
 .swiper-slide {
-  width: auto !important;
-  margin-right: 5;
+  width: 300px;       /* fixed width for proper loop */
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+
 
 /* Project cards */
 .project-card {
