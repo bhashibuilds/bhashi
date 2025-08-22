@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project 1 | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signify ML App | Portfolio</title>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="project.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet" />
 
-<!-- Navbar -->
-<header class="navbar">
-  <a href="index.html" class="logo-container">
-    <span class="logo">☺︎</span>
-    <span class="logo-text">Creativity ℰ Engineering</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
-    <li><a href="aboutme.html">About Me</a></li>
-    <li><a href="creative.html">Creative</a></li>
-    <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">Resume</a>
-  </ul>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo-container">
+      <span class="logo">☺︎</span>
+      <span class="logo-text">Creativity ℰ Engineering</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="creative.html">Creative</a></li>
+      <li>
+        <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">
+          Resume
+        </a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
 
-<!-- Floating Navigation Buttons -->
-<a href="project1.html" class="floating-nav prev">← Previous</a>
-<a href="project3.html" class="floating-nav next">Next →</a>
+  <!-- Hero -->
+  <header class="hero">
+    <h1><u>Signify</u> — Real-Time ASL Detection & Letter Recognition</h1>
+    <p>Machine Learning, Computer Vision, Accessibility, AI</p>
+    <small>Case Study • 2025</small>
+  </header>
+
+  <!-- Narrative -->
+  <section class="narrative">
+    <h2>Setting the Scene</h2>
+    <p>
+      Sign language is essential for Deaf and hard-of-hearing communities, but real-time recognition remains limited. 
+      Signify is a machine learning application that detects American Sign Language gestures and translates them into letters in real-time. 
+      The goal is to bridge communication gaps and provide developers with a complete ASL recognition pipeline.
+    </p>
+  </section>
+
+  <section class="technologies">
+    <h2>Technologies Used</h2>
+    <p>
+      Signify was developed in <strong>Python</strong> and <strong>JavaScript</strong> (for web prototypes), leveraging 
+      <strong>TensorFlow.js</strong> and <strong>MediaPipe Hands</strong> for real-time hand tracking and gesture detection. 
+      <strong>OpenCV</strong> handles webcam integration and visualization, while <strong>HTML5 & CSS</strong> create the user interface.
+    </p>
+    <p>
+      Additional technologies and techniques include:
+      <ul>
+        <li>Landmark normalization</li>
+        <li>Data export in JSON for ML model training and sequence recording for dynamic gestures</li>
+      </ul>
+    </p>
+  </section>
+
+<section class="pictures">
+  <h2>Beta Version</h2>
+  <p>
+      I am in the process of implementing cloud storage for training data, allowing the model to incorporate contributions from external users. Collecting more diverse data is essential at this stage to improve the accuracy and reliability of ASL letter recognition.
+    </p>
+  <p>
+    <a href="https://your-signify-demo-link.com" target="_blank" class="btn btn-primary">
+      Check It Out
+    </a>
+  </p><br>
+
+<section class="pic">
+  <img src="signify.png" alt="Iteration 1 - Hand Detection" />
+</section>
 
 
+  <!-- Reflection -->
+  <section class="reflection">
+    <h2>Reflection & Next Steps</h2>
+    <p>
+      Building Signify allowed me to explore the full ASL recognition pipeline: from basic hand detection 
+      using MediaPipe to letter-level recognition with neural networks. Key takeaways include the importance of consistent landmark data, real-time performance optimization, and smoothing techniques to avoid flickering predictions.
+    </p>
+    <p>
+      Next steps involve more training, implementing word-level recognition, grammar-aware suggestions, and expanding support 
+      to multiple sign languages. Additionally, a user-friendly training data collection workflow can help build custom models for different users or environments.
+    </p>
+  </section>
 
-<script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="next-project">
+    <a href="project4.html">NEXT PROJECT →</a>
+  </footer>
 </body>
 </html>
+
+

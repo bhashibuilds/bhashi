@@ -3,13 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project 1 | Portfolio</title>
+<title>My Projects | Portfolio</title>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="project.css" />
+
+<!-- CSS -->
+<style>
+  body {
+    font-family: 'Crimson Text', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .logo-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+  }
+
+  .nav-links .btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* Projects List */
+  .projects-list {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .projects-list ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  .projects-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+</style>
+</head>
+<body>
 
 <!-- Navbar -->
 <header class="navbar">
@@ -21,21 +97,20 @@
     <li><a href="work.html">Work</a></li>
     <li><a href="aboutme.html">About Me</a></li>
     <li><a href="creative.html">Creative</a></li>
-    <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">Resume</a>
+    <li><a href="Bhashini_Yasam_Resume.pdf" download class="btn">Resume</a></li>
   </ul>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
 </header>
 
-<!-- Floating Navigation Buttons -->
-<a href="project1.html" class="floating-nav prev">← Previous</a>
-<a href="project3.html" class="floating-nav next">Next →</a>
+<!-- Projects List Section -->
+<section class="projects-list">
+  <h1>Additional Projects</h1>
+  <ul>
+    <li>Project 1: <a href="#">Link or description</a></li>
+    <li>Project 2: <a href="#">Link or description</a></li>
+    <li>Project 3: <a href="#">Link or description</a></li>
+    <!-- Add more projects here -->
+  </ul>
+</section>
 
-
-
-<script src="script.js"></script>
 </body>
 </html>
