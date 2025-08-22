@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprouted Desktop App | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo-container">
+      <span class="logo">☺︎</span>
+      <span class="logo-text">Creativity ℰ Engineering</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="creative.html">Creative</a></li>
+      <li>
+        <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">
+          Resume
+        </a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1><u>Sprouted</u> — A To-Do List That Grows With You</h1>
+    <p>Desktop App, Productivity, Gamification, Creative Coding</p>
+    <small>Project • 2024</small>
+  </header>
+
+  <!-- Narrative -->
+  <section class="narrative">
+    <h3>Setting the Scene</h3>
+    <p>
+      Staying productive can be difficult, but motivation grows when we see progress. 
+      <strong>Sprouted</strong> is a desktop to-do list app that rewards completed tasks with 
+      a growing digital plant. Each task is tied to a timer—when you finish on time, 
+      your plant flourishes. If not, the plant withers away. 
+      The goal was to design a tool that combines productivity and mindfulness 
+      through gentle gamification.
+    </p>
+  </section>
+
+  <!-- Technologies -->
+  <section class="technologies">
+    <h3>Technologies Used</h3>
+    <p>
+      <strong>Sprouted</strong> was developed as a cross-platform desktop app using 
+      <strong>Python</strong> and <strong>PyQt</strong> for the interface. 
+      The task timer logic was handled with Python’s <code>time</code> and <code>threading</code> libraries, 
+      while <strong>SQLite</strong> was used for lightweight task persistence. 
+      Plant animations were created with custom SVGs rendered dynamically in the UI.
+    </p>
+    <p>
+      The app was packaged into a standalone executable using <strong>PyInstaller</strong> 
+      for easy distribution.
+    </p>
+  </section>
+
+  <!-- Features / Screens -->
+  <section class="pictures">
+    <h2>App Preview</h2>
+    <p>Here are sample screens showing task creation, timers, and plant growth:</p>
+    <a href="TodoPlantApp.zip" download class="btn btn-primary">
+      Download the App
+    </a>
+    <div class="prototype-gallery">
+      <img src="sprouted1.png" alt="Sprouted App - Task List" style="width:50%; max-width:300px; margin:1rem auto; display:block;" />
+<img src="sprouted2.png" alt="Sprouted App - Plant Growth" style="width:50%; max-width:300px; margin:1rem auto; display:block;" />
+
+    </div>
+  </section>
+
+
+
+  <!-- Reflection -->
+  <section class="reflection">
+    <h2>Reflection & Next Steps</h2>
+    <p>
+      Building <strong>Sprouted</strong> helped me explore gamification in productivity tools 
+      and how visual feedback can shape user behavior. 
+      My biggest takeaway: small, playful rewards (like a thriving plant) 
+      encourage users to stay consistent without feeling pressured.
+    </p>
+    <p>
+      Next steps include adding plant variety, streak tracking, 
+      and integrating with calendar apps for a smoother workflow. 
+      I also plan to experiment with mobile ports so users can take their plants with them.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="next-project">
+    <a href="project8.html">NEXT PROJECT →</a>
+  </footer>
+</body>
+</html>
