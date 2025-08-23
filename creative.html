@@ -1,12 +1,91 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creative Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fafafa;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+    }
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Grid of images */
+    .grid-container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 across */
+      grid-template-rows: repeat(4, 1fr);   /* 4 down (20 pics total) */
+      gap: 10px;
+      padding: 10px;
+    }
+    .grid-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="nav-left">
-      <a href="aboutme.html" class="nav-link">About Me</a>
-    </div>
-    <div class="logo-container">
-      <h1 class="crimson-text-semibold">Bhashini Yasam</h1>
-    </div>
-    <div class="nav-right">
-      <a href="index.html" class="nav-link">☺︎ Home</a>
+    <a href="index.html" class="logo-container">
+      <span class="logo">☺︎</span>
+      <span class="logo-text">Creativity ℰ Engineering</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="creative.html">Creative</a></li>
+      <a href="Bhashini_Yasam_Resume.pdf" download class="nav-link btn btn-primary" style="margin-left:10px;">
+        Resume
+      </a>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
+
+  <!-- Grid of pictures -->
+  <div class="grid-container">
+    <img src="51.jpg" alt="Creative 1">
+    <img src="IMG_5546.JPG" alt="Creative 2">
+    <img src="53.jpg" alt="Creative 3">
+    <img src="54.jpg" alt="Creative 4">
+    <img src="55.jpg" alt="Creative 5">
+    <img src="56.jpg" alt="Creative 6">
+    <img src="57.jpg" alt="Creative 7">
+    <img src="58.jpg" alt="Creative 8">
+    <img src="59.jpg" alt="Creative 9">
+    <img src="60.jpg" alt="Creative 10">
+  </div>
+</body>
+</html>
