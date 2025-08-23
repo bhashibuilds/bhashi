@@ -120,12 +120,29 @@ body {
 }
 
 .footer-name h1 {
-  font-size: 9rem;
-  font-weight: 600; /* semi-bold */
-  font-family: 'Crimson Text', serif; /* correct font reference */
+  font-size: 9rem; /* large desktop size */
+  font-weight: 600;
+  font-family: 'Crimson Text', serif;
   color: #000;
   letter-spacing: 2px;
+  margin: 0;
 }
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .footer-name h1 {
+    font-size: 6rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .footer-name h1 {
+    font-size: 3rem;
+    letter-spacing: 1px; /* tighten spacing on small screens */
+  }
+}
+
 
 
 /* Swiper */
