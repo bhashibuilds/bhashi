@@ -1,4 +1,3 @@
-/* Reset */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
 * {
@@ -6,8 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 
 /* Navbar */
 .navbar {
@@ -22,6 +19,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #000;
 }
 
 .logo-container {
@@ -33,6 +31,7 @@
 
 .logo {
   font-size: 18px;
+  font-family: 'Archivo Black', sans-serif;
   color: #000;
   margin-right: 0.5rem;
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
@@ -40,105 +39,16 @@
 
 .logo-text {
   font-size: 16px;
+  font-weight: 600;
   color: #333;
 }
 
-/* Nav links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-  font-size: 15px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.nav-link {
-  font-family: "Crimson Text", serif;
-  font-size: 16px;
-  color: #111;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-.nav-link:hover {
-  color: #555;
-  text-decoration: underline;
-}
-
-/* Hamburger menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #111;
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 55px;
-    right: 20px;
-    flex-direction: column;
-    background-color: #fdfdfd;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Google Fonts */
-body {
-  margin: 0;
-  font-family: 'Crimson Text', serif;
-  background-color: #fff;
-  color: #111;
-  line-height: 1.7;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #000;
-  background: #fff;
-  position: sticky;
-  top: 0;
-}
-
-.logo {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 1.5rem;
-  margin-right: 8px;
-}
-
-.logo-text {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
+/* Nav links (default desktop) */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  font-size: 15px;
 }
 
 .nav-links a {
@@ -147,6 +57,45 @@ body {
   font-weight: 600;
 }
 
+/* Hamburger menu */
+.hamburger {
+  display: none;       /* hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 2000;       /* ensure above nav */
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: black;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;              /* hidden by default */
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    flex-direction: column;
+    background-color: #fdfdfd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;              /* show when active */
+  }
+
+  .hamburger {
+    display: flex;              /* show hamburger on mobile */
+  }
+}
+
+/* Buttons */
 .btn {
   padding: 0.5rem 1rem;
   border: 1px solid #000;
@@ -156,11 +105,18 @@ body {
   border-radius: 4px;
 }
 
-
-
 .btn-secondary {
   background: #fff;
   color: #000;
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.7;
 }
 
 /* Hero */
@@ -404,10 +360,7 @@ blockquote {
   color: #333;
 }
 
-
-
 /* Cursor */
 * {
   cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat101.cur), auto !important;
 }
-
